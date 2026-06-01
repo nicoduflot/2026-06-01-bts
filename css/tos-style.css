@@ -1,0 +1,22 @@
+/*
+Il est possible c'inporter un fichier CSS dans un autre fichier CSS
+/!\ ATTENTION /!\
+Les lignes d'import doivent se suivre 
+et être les première lignes qui doivent 
+apparaître (sans compter les commentaires) 
+dans un fichier CSS
+*/
+
+/* ----------------- Import de fichiers CSS ---------------------- */
+
+
+/* ----------------- Déclarations CSS générales ------------------ */
+
+
+/* ----------------- Déclarations classes ------------------------ */
+
+
+/* ----------------- Déclarations selon la structure HTML -------- */
+
+
+/* ----------------- Media querie -------------------------------- */
