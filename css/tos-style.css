@@ -6,17 +6,54 @@ et être les première lignes qui doivent
 apparaître (sans compter les commentaires) 
 dans un fichier CSS
 */
-
 /* ----------------- Import de fichiers CSS ---------------------- */
+@import url('./UniversalSerif.css');
 
 
 /* ----------------- Déclarations CSS générales ------------------ */
+/* ----------------- root: la surcharge du css navigateur -------- */
+:root{
+    --general-font-family: Arial, Helvetica, 'sans serif';
+    font-family: var(--general-font-family);
+    --general-font-size: 1.2rem;
+    font-size: var(--general-font-size);
+    --general-line-height: 1.5rem;
+    line-height: var(--general-line-height);
+}
 
+/* 
+le sélecteur '*' permet de cibler tous les éléments soit en général
+*{
+}
+soit tous les descendants d'un élément
+element *{
+
+}
+soit tous les descendants directs (fils et filles) d'un élément
+element > *{
+
+}
+*/
+
+*{
+    box-sizing: border-box;
+}
 
 /* ----------------- Déclarations classes ------------------------ */
+.site-title{
+    font-family: 'UniversalSerif';
+    font-size: 2rem;
+    line-height: 2.5rem;
+}
 
+/* Rendre les images RWD */
+.img-fluid{
+    max-width: 100%;
+}
 
 /* ----------------- Déclarations selon la structure HTML -------- */
-
+body{
+    margin: 0;
+}
 
 /* ----------------- Media querie -------------------------------- */
