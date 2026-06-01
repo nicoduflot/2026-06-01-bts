@@ -1,2 +1,42 @@
 @import url('./tos-style.css');
 
+.test-viewport{
+    border: 1px solid black;
+    width: 80vw;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#viewport-nav ul{
+    display: flex;
+    flex-wrap: wrap;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    min-height: 3rem;
+    line-height: 3rem;
+}
+
+#viewport-nav ul a{
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+}
+
+.hero-banner{
+    width: 99vw;
+    margin-left: auto;
+    margin-right: auto;
+    height: calc( 100vh - 3rem );
+    background: url('../images/sce-hero-2400.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.bg-pos-x-left{
+    background-position: left;
+}
+
+.bg-pos-x-right-25{
+    background-position-x: right calc( 100% / 4 );
+}
