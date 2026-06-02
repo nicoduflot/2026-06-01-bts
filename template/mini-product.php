@@ -1,43 +1,52 @@
 <!-- $product -->
 <div class="col">
-    <div class="card shadow-sm">
-<!--thumbnail -->
-        <svg
-            aria-label="Placeholder: Thumbnail"
-            class="bd-placeholder-img card-img-top"
-            height="225"
-            preserveAspectRatio="xMidYMid slice"
-            role="img"
-            width="100%"
-            xmlns="http://www.w3.org/2000/svg">
-            <title>Placeholder</title>
-            <rect width="100%" height="100%" fill="#55595c"></rect>
-            <text x="50%" y="50%" fill="#eceeef" dy=".3em">
-                Thumbnail
-            </text>
-        </svg>
+    <div class="card shadow-sm" style="height: 100%;">
+        <!--thumbnail -->
+        <figure class="figure">
+            <img class="figure-img img-fluid" src="<?= $product->thumbnail  ?>" alt="<?= $product->description ?>" />
+        </figure>
         <div class="card-body">
-            <h2 span class="card-title">
+            <h2 class="card-title">
                 <?= $product->title ?>
             </h2>
             <p class="card-text">
-<!-- description -->
+                <?= mb_strcut($product->description, 0, 150, "UTF-8").'...'; ?>
             </p>
-            <ul>
-                <!-- categorie(s) -->
-            </ul>
+            <h3>Catégorie</h3>
+            <p>
+                <a href="#"><?= $product->category ?></a>
+            </p>
             <!-- moyenne des notes (rating) sur 5 -->
-            <div
-                class="d-flex justify-content-between align-items-center">
-                <div class="btn-group">
-                    <a
-                        type="button"
-                        class="btn btn-sm btn-outline-secondary" href="index-bs.php?id=<?php  ?>">
-                        Voir
-                    </a>
-                </div>
-                <small class="text-body-secondary"><!-- prix --></small>
+            <h3>Note sur 5</h3>
+            <?php
+            $totRating = 0;
+            $nbRatings = 0;
+            foreach ($product->reviews as $review) {
+                $totRating = $totRating + $review->rating;
+                $nbRatings = $nbRatings + 1;
+            }
+            echo number_format(($totRating / $nbRatings), 1) . ' / 5';
+            ?>
+            <div>
+                <h3>Étiquette(s)</h3>
+                <!-- les tags -->
+                <?php
+                foreach ($product->tags as $tag) {
+                ?>
+                    <span class="badge text-bg-dark"><?= $tag ?></span>
+                <?php
+                }
+                ?>
             </div>
         </div>
+        <div
+            class="card-footer d-flex justify-content-between align-items-center">
+                <a
+                    type="button"
+                    class="btn btn-sm btn-outline-secondary" href="index-bs.php?id=<?= $product->id ?>">
+                    Voir
+                </a>
+            <small class="text-body-secondary"><?= $product->price ?> €</small>
+        </div>        
     </div>
 </div>
