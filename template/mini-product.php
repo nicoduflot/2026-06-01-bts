@@ -1,6 +1,7 @@
 <!-- $product -->
 <div class="col">
     <div class="card shadow-sm">
+<!--thumbnail -->
         <svg
             aria-label="Placeholder: Thumbnail"
             class="bd-placeholder-img card-img-top"
@@ -20,25 +21,22 @@
                 <?= $product->title ?>
             </h2>
             <p class="card-text">
-                This is a wider card with supporting text below as a natural
-                lead-in to additional content. This content is a little bit
-                longer.
+<!-- description -->
             </p>
+            <ul>
+                <!-- categorie(s) -->
+            </ul>
+            <!-- moyenne des notes (rating) sur 5 -->
             <div
                 class="d-flex justify-content-between align-items-center">
                 <div class="btn-group">
-                    <button
+                    <a
                         type="button"
-                        class="btn btn-sm btn-outline-secondary">
-                        View
-                    </button>
-                    <button
-                        type="button"
-                        class="btn btn-sm btn-outline-secondary">
-                        Edit
-                    </button>
+                        class="btn btn-sm btn-outline-secondary" href="index-bs.php?id=<?php  ?>">
+                        Voir
+                    </a>
                 </div>
-                <small class="text-body-secondary">9 mins</small>
+                <small class="text-body-secondary"><!-- prix --></small>
             </div>
         </div>
     </div>
