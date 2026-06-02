@@ -1,14 +1,6 @@
-<?php
-$url = 'https://dummyjson.com/products';
-$raw = file_get_contents($url);
-
-$total = json_decode($raw)->total;
-$skip = json_decode($raw)->skip;
-$limit = json_decode($raw)->limit;
-$products = json_decode($raw)->products;
-?>
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -16,9 +8,32 @@ $products = json_decode($raw)->products;
     <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.css" />
     <link rel="stylesheet" href="./node_modules/bootstrap-icons/font/bootstrap-icons.css" />
     <script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
-    <script src="./js/products.js" defer></script>
 </head>
+
 <body>
-    
+    <?php 
+    include './template/main-nav.php'; 
+    include './template/header.php';
+    ?>
+    <main>
+        <section class="py-5 text-center container">
+            <div class="row py-lg-5">
+                <div class="col-lg-6 col-md-8 mx-auto">
+                    <h1 class="fw-light">Album example</h1>
+                    <p class="lead text-body-secondary">
+                        Something short and leading about the collection below—its
+                        contents, the creator, etc. Make it short and sweet, but not too
+                        short so folks don’t simply skip over it entirely.
+                    </p>
+                    <p>
+                        <a href="#" class="btn btn-primary my-2">Main call to action</a>
+                        <a href="#" class="btn btn-secondary my-2">Secondary action</a>
+                    </p>
+                </div>
+            </div>
+        </section>
+        <?php include './template/products.php' ?>
+    </main>
 </body>
+
 </html>
