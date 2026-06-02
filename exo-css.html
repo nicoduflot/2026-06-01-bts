@@ -1,81 +1,163 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Exo CSS</title>
+    <link rel="stylesheet" href="./css/exo-css.css" />
 </head>
 <!--
-Créer une mise en page de cet exercice : 
-* largeur principale dépendante de la largeur d'affichage de l'appareil (au choix %, vw ou media querie)
+Créer une mise en page de cet exercice (l'énnoncé a été modifié): 
+* largeur principale dépendante de la largeur d'affichage de l'appareil
+    (au choix %, vw ou media querie) Choisi pour la correction : media queries
 * Les articles en système ligne - colonne
-    * Smartphone : 1 article / col
-    * tablette (992px) : 2 articles / col
-    * écran (1200px) : 3 articles / col
+    * Smartphone : 1 article / col => contenu 100%
+    * tablette portrait (576px)
+        * 2 articles / col
+        * contenu 540px
+    * tablette paysage (992px)
+        * 3 articles / col
+        * contenu 960px
+    * écran (1200px)
+        * 4 articles / col
+        * contenu 1140px
 -->
+
 <body>
     <header>
-        <div>
+        <div class="container">
             titre
         </div>
     </header>
     <nav>
-        <ul>
+        <ul class="container">
             <li><a href="./">accueil</a></li>
             <li><a href="#">Un lien</a></li>
         </ul>
     </nav>
-    <main>
-        <section>
+    <aside class="container">
+        <q>toto</q>
+    </aside>
+    <main class="container">
+        <section class="row">
             <h1>Articles</h1>
             <article>
-                <h2>Titre</h2>
-                <p>
-                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laudantium, ipsam. Optio impedit, rerum maiores quaerat ea quidem, nesciunt eligendi a modi autem vero ex odio nihil saepe fugiat numquam totam.
-                </p>
-                <img src="./images/james-white-composite-400w.png" />
+                <div class="miniature">
+                    <figure>
+                        <div class="ratio ratio-16-9">
+                            <img src="./images/better-off-dead-1200-1200-675-675-crop-000000-768x432.jpg" />
+                        </div>
+                    </figure>
+                    <h2>Better off dead</h2>
+                    <p>
+                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laudantium, ipsam. Optio impedit, rerum
+                        maiores quaerat ea quidem, nesciunt eligendi a modi autem vero ex odio nihil saepe fugiat numquam
+                        totam.
+                    </p>
+                </div>
+                <div>
+                    <button>Lire la suite</button>
+                </div>
             </article>
             <article>
-                <h2>Titre</h2>
-                <p>
-                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laudantium, ipsam. Optio impedit, rerum maiores quaerat ea quidem, nesciunt eligendi a modi autem vero ex odio nihil saepe fugiat numquam totam.
-                </p>
-                <img src="./images/james-white-composite-400w.png" />
+                <div class="miniature">
+                    <figure>
+                        <div class="ratio ratio-16-9">
+                            <img src="./images/better-off-dead-1200-1200-675-675-crop-000000-768x432.jpg" />
+                        </div>
+                    </figure>
+                    <h2>Titre vraiment beaucoup trop long</h2>
+                    <p>
+                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laudantium, ipsam. Optio impedit, rerum
+                        maiores quaerat ea quidem, nesciunt eligendi a modi autem vero ex odio nihil saepe fugiat numquam
+                        totam.
+                    </p>
+                </div>
+                <div>
+                    <button>Lire la suite</button>
+                </div>
             </article>
             <article>
-                <h2>Titre</h2>
-                <p>
-                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laudantium, ipsam. Optio impedit, rerum maiores quaerat ea quidem, nesciunt eligendi a modi autem vero ex odio nihil saepe fugiat numquam totam.
-                </p>
-                <img src="./images/james-white-composite-400w.png" />
+                <div class="miniature">
+                    <figure>
+                        <div class="ratio ratio-16-9">
+                            <img src="./images/better-off-dead-1200-1200-675-675-crop-000000-768x432.jpg" />
+                        </div>
+                    </figure>
+                    <h2>Better off dead</h2>
+                    <p>
+                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laudantium, ipsam. Optio impedit, rerum
+                        maiores quaerat ea quidem, nesciunt eligendi a modi autem vero ex odio nihil saepe fugiat numquam
+                        totam.
+                    </p>
+                </div>
+                <div>
+                    <button>Lire la suite</button>
+                </div>
             </article>
             <article>
-                <h2>Titre</h2>
-                <p>
-                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laudantium, ipsam. Optio impedit, rerum maiores quaerat ea quidem, nesciunt eligendi a modi autem vero ex odio nihil saepe fugiat numquam totam.
-                </p>
-                <img src="./images/james-white-composite-400w.png" />
+                <div class="miniature">
+                    <figure>
+                        <div class="ratio ratio-16-9">
+                            <img src="./images/better-off-dead-1200-1200-675-675-crop-000000-768x432.jpg" />
+                        </div>
+                    </figure>
+                    <h2>Better off dead</h2>
+                    <p>
+                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laudantium, ipsam. Optio impedit, rerum
+                        maiores quaerat ea quidem, nesciunt eligendi a modi autem vero ex odio nihil saepe fugiat numquam
+                        totam.
+                    </p>
+                </div>
+                <div>
+                    <button>Lire la suite</button>
+                </div>
             </article>
             <article>
-                <h2>Titre</h2>
-                <p>
-                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laudantium, ipsam. Optio impedit, rerum maiores quaerat ea quidem, nesciunt eligendi a modi autem vero ex odio nihil saepe fugiat numquam totam.
-                </p>
-                <img src="./images/james-white-composite-400w.png" />
+                <div class="miniature">
+                    <figure>
+                        <div class="ratio ratio-16-9">
+                            <img src="./images/better-off-dead-1200-1200-675-675-crop-000000-768x432.jpg" />
+                        </div>
+                    </figure>
+                    <h2>Better off dead</h2>
+                    <p>
+                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laudantium, ipsam. Optio impedit, rerum
+                        maiores quaerat ea quidem, nesciunt eligendi a modi autem vero ex odio nihil saepe fugiat numquam
+                        totam.
+                    </p>
+                </div>
+                <div>
+                    <button>Lire la suite</button>
+                </div>
             </article>
             <article>
-                <h2>Titre</h2>
-                <p>
-                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laudantium, ipsam. Optio impedit, rerum maiores quaerat ea quidem, nesciunt eligendi a modi autem vero ex odio nihil saepe fugiat numquam totam.
-                </p>
-                <img src="./images/james-white-composite-400w.png" />
+                <div class="miniature">
+                    <figure>
+                        <div class="ratio ratio-16-9">
+                            <img src="./images/better-off-dead-1200-1200-675-675-crop-000000-768x432.jpg" />
+                        </div>
+                    </figure>
+                    <h2>Better off dead</h2>
+                    <p>
+                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laudantium, ipsam. Optio impedit, rerum
+                        maiores quaerat ea quidem, nesciunt eligendi a modi autem vero ex odio nihil saepe fugiat numquam
+                        totam.
+                    </p>
+                </div>
+                <div>
+                    <button>Lire la suite</button>
+                </div>
             </article>
+
         </section>
     </main>
     <footer>
-        <div>
+        <div class="container">
             &copy; DAWAN - 06 - 2026
         </div>
     </footer>
 </body>
+
 </html>
