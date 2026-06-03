@@ -3,7 +3,7 @@ $url = 'https://dummyjson.com/products';
 if (isset($_GET['category']) && $_GET['category'] !== '') {
     $url = $url . '/category/' . $_GET['category'];
 }
-$raw = file_get_contents($url);
+$raw = @file_get_contents($url);
 $data = json_decode($raw);
 $total = $data->total;
 $skip = $data->skip;

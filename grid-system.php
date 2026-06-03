@@ -130,6 +130,9 @@ include './template/init.php';
                 <div class="col-sm-6 col-md-4 col-lg-2 col-xl-1 border border-danger p-2">
                     <img src="./images/better-off-dead-1200-1200-675-675-crop-000000-768x432.jpg" class="img-fluid" />
                 </div>
+                <div class="col-sm-6 col-md-4 col-lg-2 col-xl-1 border border-danger p-2">
+                    <img src="./images/better-off-dead-1200-1200-675-675-crop-000000-768x432.jpg" class="img-fluid" />
+                </div>
             </div>
         </section>
     </main>

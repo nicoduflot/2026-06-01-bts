@@ -1,7 +1,7 @@
 <!-- 
 https://tm-shopify027-furniture.myshopify.com/collections/computer-desks/products/avenue-six-roundabout-spring-green-low-circle-lounger 
 -->
-<section class="container">
+<section>
     <?php
     if (isset($_GET['id']) && $_GET['id'] !== '') {
         $url = 'https://dummyjson.com/products/' . $_GET['id'];

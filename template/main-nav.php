@@ -14,11 +14,6 @@
                     <?= toggleTextUri('index-bs.php', 'aria-current="page"') ?> 
                     href="./index-bs.php">Shop</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link<?= toggleTextUri('grid-system.php', ' active') ?>" 
-                    <?= toggleTextUri('grid-system.php', 'aria-current="page"') ?> 
-                    href="./grid-system.php">Grille bootstrap</a>
-                </li>
                 <?php
                 $subject = 'Catégories';
                 $url = 'https://dummyjson.com/products/categories';
@@ -38,6 +33,16 @@
                         }
                         ?>
                     </ul>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link<?= toggleTextUri('grid-system.php', ' active') ?>" 
+                    <?= toggleTextUri('grid-system.php', 'aria-current="page"') ?> 
+                    href="./grid-system.php">Grille bootstrap</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link<?= toggleTextUri('users.php', ' active') ?>" 
+                    <?= toggleTextUri('users.php', 'aria-current="page"') ?> 
+                    href="./users.php">Utilisateurs</a>
                 </li>
             </ul>
             <form class="d-flex" role="search">

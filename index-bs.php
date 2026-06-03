@@ -18,7 +18,7 @@ include './template/init.php';
     include './template/main-nav.php';
     include './template/header.php';
     ?>
-    <main class="py-2">
+    <main class="container py-2">
         <?php
         if (isset($_GET['id']) || isset($_GET['category'])) {
             $id = (isset($_GET['id']) && isset($_GET['id']) !== '') ? isset($_GET['id']) : '';
@@ -35,7 +35,7 @@ include './template/init.php';
             }
         } else {
         ?>
-            <section class="py-5 text-center container">
+            <section class="py-5 text-center">
                 <div class="row py-lg-5">
                     <div class="col-lg-6 col-md-8 mx-auto">
                         <h1 class="fw-light">Album example</h1>
