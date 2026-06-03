@@ -7,10 +7,17 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="./">Accueil</a>
+                    <a class="nav-link" href="./">Accueil</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="./index-bs.php">Shop</a>
+                    <a class="nav-link<?= toggleTextUri('index-bs.php', ' active') ?>" 
+                    <?= toggleTextUri('index-bs.php', 'aria-current="page"') ?> 
+                    href="./index-bs.php">Shop</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link<?= toggleTextUri('grid-system.php', ' active') ?>" 
+                    <?= toggleTextUri('grid-system.php', 'aria-current="page"') ?> 
+                    href="./grid-system.php">Grille bootstrap</a>
                 </li>
                 <?php
                 $subject = 'Catégories';

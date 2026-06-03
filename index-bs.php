@@ -1,3 +1,6 @@
+<?php
+include './template/init.php';
+?>
 <!DOCTYPE html>
 <html lang="fr">
 
@@ -5,9 +8,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Index Bootstrap</title>
-    <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.css" />
-    <link rel="stylesheet" href="./node_modules/bootstrap-icons/font/bootstrap-icons.css" />
-    <script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+    <?php
+    include './template/head.php';
+    ?>
 </head>
 
 <body>
