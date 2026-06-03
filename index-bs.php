@@ -32,7 +32,25 @@
                 </div>
             </div>
         </section>
-        <?php include './template/products.php' ?>
+        <?php 
+        if( isset($_GET['id']) || isset($_GET['catagory'])){
+            $id = ( isset($_GET['id']) && isset($_GET['id']) !== '')? isset($_GET['id']): '';
+            $category = ( isset($_GET['category']) && isset($_GET['category']) !== '')? isset($_GET['category']): '';
+            switch(true){
+                case ($id !== ''): 
+                    /* fiche produit */
+                    include './template/product-sheet.php';
+                break;
+                case ($category !== ''): 
+                    /* fiche produit */
+                    include './template/products.php';
+                break;
+            }
+        }else{
+            include './template/products.php';
+        }
+        
+        ?>
     </main>
 </body>
 

@@ -14,7 +14,7 @@
             </p>
             <h3>Catégorie</h3>
             <p>
-                <a href="#"><?= $product->category ?></a>
+                <a href="./index-bs.php?category=<?= $product->category ?>"><?= $product->category ?></a>
             </p>
             <!-- moyenne des notes (rating) sur 5 -->
             <h3>Note sur 5</h3>
