@@ -12,21 +12,25 @@
                 <li class="nav-item">
                     <a class="nav-link" href="./index-bs.php">Shop</a>
                 </li>
+                <?php
+                $subject = 'Catégories';
+                $url = 'https://dummyjson.com/products/categories';
+                $data = json_decode(@file_get_contents($url));
+                $href = './index-bs.php?category=';
+                ?>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        Dropdown
+                        <?= $subject ?>
                     </a>
                     <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="#">Action</a></li>
-                        <li><a class="dropdown-item" href="#">Another action</a></li>
-                        <li>
-                            <hr class="dropdown-divider">
-                        </li>
-                        <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        <?php
+                        foreach ($data as $listItem) {
+                        ?>
+                            <li><a class="dropdown-item" href="<?= $href.$listItem->slug ?>"><?= $listItem->name ?></a></li>
+                        <?php
+                        }
+                        ?>
                     </ul>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link disabled" aria-disabled="true">Disabled</a>
                 </li>
             </ul>
             <form class="d-flex" role="search">
