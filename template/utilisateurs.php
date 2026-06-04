@@ -5,7 +5,7 @@
             include './template/tab-users.php';
             ?>
         </div>
-        <div class="col-md-6">
+        <div class="col-md-6" style="height: 52vh;">
             <iframe class="w-100 h-100" src="./user-card.php" name="user-card"></iframe>
         </div>
     </div>

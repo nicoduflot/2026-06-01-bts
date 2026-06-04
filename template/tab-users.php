@@ -1,10 +1,11 @@
 <div>
     <h2 class="h3">Tous les utilisateurs</h2>
-    <div class="table-responsive overflow-y-auto" style="height: 25vh;">
+    <div class="table-responsive overflow-y-auto" style="height: 50vh;">
         <table class="table">
             <thead class="sticky-top">
                 <tr>
                     <th></th>
+                    <th>Action</th>
                     <th>Prénom</th>
                     <th>Nom</th>
                     <th>Email</th>
@@ -30,11 +31,12 @@
                         lien target user-card
                     */
                 ?>
-                <tr>
-                    <td>image</td>
-                    <td>firstName</td>
-                    <td>lastName</td>
-                    <td>email</td>
+                <tr style="line-height: 2rem;">
+                    <td><img src="<?= $user->image ?>" alt="<?= $user->firstName ?> <?= $user->lastName ?> profile picture" style="width: 2rem" /></td>
+                    <td><a class="btn btn-sm btn-outline-success" href="./user-card.php?id=<?= $user->id ?>" target="user-card">Voir</a></td>
+                    <td><?= $user->firstName ?></td>
+                    <td><?= $user->lastName ?></td>
+                    <td><?= $user->email ?></td>
                 </tr>
                 <?php
                 }
